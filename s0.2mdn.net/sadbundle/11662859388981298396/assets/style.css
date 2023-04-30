@@ -1,0 +1,793 @@
+/*OLA UNITS*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+sub,
+sup {
+
+    font-size: 45%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+sup {
+    top: -0.8em;
+    
+}
+
+/*------- Calling FT Fonts --------*/
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('https://cdn.flashtalking.com/93411/fonts/2cczrpn38mxjc205rcrjrijcf71xzv9kbhkp8exz.eot'); /* IE9 Compat Modes */
+  src: url('https://cdn.flashtalking.com/93411/fonts/2cczrpn38mxjc205rcrjrijcf71xzv9kbhkp8exz.woff2') format('woff2'),
+   url('https://cdn.flashtalking.com/93411/fonts/2cczrpn38mxjc205rcrjrijcf71xzv9kbhkp8exz.woff') format('woff'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraLight';
+  src: url('https://cdn.flashtalking.com/93411/fonts/qh7ol4i3pg42u0v5rydo487uats6yyvk7xlxollt.eot'); /* IE9 Compat Modes */
+  src: url('https://cdn.flashtalking.com/93411/fonts/qh7ol4i3pg42u0v5rydo487uats6yyvk7xlxollt.woff2') format('woff2'),
+   url('https://cdn.flashtalking.com/93411/fonts/qh7ol4i3pg42u0v5rydo487uats6yyvk7xlxollt.woff') format('woff'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-Thin';
+  src: url('https://cdn.flashtalking.com/93411/fonts/fgelvkzt0f3nz70a5jvhvohluh4evpdqurateurv.eot'); /* IE9 Compat Modes */
+  src: url('https://cdn.flashtalking.com/93411/fonts/fgelvkzt0f3nz70a5jvhvohluh4evpdqurateurv.woff2') format('woff2'),
+   url('https://cdn.flashtalking.com/93411/fonts/fgelvkzt0f3nz70a5jvhvohluh4evpdqurateurv.woff') format('woff'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('https://cdn.flashtalking.com/93411/fonts/tu11k1r8ozm2ttu90j9uoh0wqrx0mvxxq4w8g1zb.eot'); /* IE9 Compat Modes */
+  src: url('https://cdn.flashtalking.com/93411/fonts/tu11k1r8ozm2ttu90j9uoh0wqrx0mvxxq4w8g1zb.woff2') format('woff2'),
+   url('https://cdn.flashtalking.com/93411/fonts/tu11k1r8ozm2ttu90j9uoh0wqrx0mvxxq4w8g1zb.woff') format('woff'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('https://cdn.flashtalking.com/93411/fonts/Montserrat-Medium.woff') format('woff'),
+   url('https://cdn.flashtalking.com/93411/fonts/Montserrat-Medium.woff') format('woff'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('https://cdn.flashtalking.com/93411/fonts/b27nt0fra3fmh0qy2domq99fog1al6d4g0wj7qk8.eot'); /* IE9 Compat Modes */
+  src: url('https://cdn.flashtalking.com/93411/fonts/b27nt0fra3fmh0qy2domq99fog1al6d4g0wj7qk8.woff2') format('woff2'),
+   url('https://cdn.flashtalking.com/93411/fonts/b27nt0fra3fmh0qy2domq99fog1al6d4g0wj7qk8.woff') format('woff'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('https://cdn.flashtalking.com/93411/fonts/8dn1hqxhjozmohaxmiydzcl4ohc6hbxr2pga5ec1.eot'); /* IE9 Compat Modes */
+  src: url('https://cdn.flashtalking.com/93411/fonts/8dn1hqxhjozmohaxmiydzcl4ohc6hbxr2pga5ec1.woff2') format('woff2'),
+   url('https://cdn.flashtalking.com/93411/fonts/8dn1hqxhjozmohaxmiydzcl4ohc6hbxr2pga5ec1.woff') format('woff'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-Black';
+  src: url('https://cdn.flashtalking.com/93411/fonts/Montserrat-Black.woff') format('woff'),
+   url('https://cdn.flashtalking.com/93411/fonts/Montserrat-Black.woff') format('woff'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: url('https://cdn.flashtalking.com/93411/fonts/Montserrat-ExtraBold.woff') format('woff'),
+   url('https://cdn.flashtalking.com/93411/fonts/Montserrat-ExtraBold.woff') format('woff'); /* Legacy iOS */
+}
+
+/* ---------------------------------- Styles ---------------------------------- */
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+div, img, ft-dynamic {
+   position : absolute;
+}
+
+#container {
+    width: 160px;
+    height: 600px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #112F64;
+    color: white;
+    border: 1px solid #808080;
+}
+
+
+/* ---------------------------------- F01 IMAGES ELEMENTS ---------------------------------- */
+#F1CircleLeftContainer{
+    position: absolute;
+    top: 340px;
+    left: 0px;
+    width: 112px;
+    height: 112px;
+}
+
+#F1CircleLeft{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 112px;
+    height: 112px;
+    background: url("F1F4FFCircle.png");
+    background-size: 100% 100%;
+}
+
+#F1CircleRightContainer{
+    position: absolute;
+    top: 138px;
+    left: 190px;
+    width: 112px;
+    height: 112px;
+}
+
+#F1CircleRight{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 112px;
+    height: 112px;
+    background: url("F1F4FFCircle.png");
+    background-size: 100% 100%;
+}
+
+#F1ImageMiddleContainer{
+    position: absolute;
+    top: 255px;
+    left: 80px;
+    width: 141px;
+    height: 74px;
+}
+
+#F1ImageMiddle{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 141px;
+    height: 74px;
+    background: url("F1Image.png");
+    background-size: 100% 100%;
+}
+
+/* ---------------------------------- F02 IMAGES ELEMENTS ---------------------------------- */
+#F2CircleLeftContainer{
+    position: absolute;
+    top: 340px;
+    left: 0px;
+    width: 112px;
+    height: 112px;
+}
+
+#F2CircleLeft{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 112px;
+    height: 112px;
+    background: url("F2Circle.png");
+    background-size: 100% 100%;
+}
+
+#F2CircleRightContainer{
+    position: absolute;
+    top: 138px;
+    left: 190px;
+    width: 112px;
+    height: 112px;
+}
+
+#F2CircleRight{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 112px;
+    height: 112px;
+    background: url("F2Circle.png");
+    background-size: 100% 100%;
+}
+
+#F2ImageMiddleContainer{
+    position: absolute;
+    top: 255px;
+    left: 80px;
+    width: 141px;
+    height: 74px;
+}
+
+#F2ImageMiddle{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 141px;
+    height: 74px;
+    background: url("F2Image.png");
+    background-size: 100% 100%;
+}
+
+/* ---------------------------------- F03 IMAGES ELEMENTS ---------------------------------- */
+#F3CircleLeftContainer{
+    position: absolute;
+    top: 340px;
+    left: 0px;
+    width: 112px;
+    height: 112px;
+}
+
+#F3CircleLeft{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 112px;
+    height: 112px;
+    background: url("F3Circle.png");
+    background-size: 100% 100%;
+}
+
+#F3CircleRightContainer{
+    position: absolute;
+    top: 138px;
+    left: 190px;
+    width: 112px;
+    height: 112px;
+}
+
+#F3CircleRight{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 112px;
+    height: 112px;
+    background: url("F3Circle.png");
+    background-size: 100% 100%;
+}
+
+#F3ImageMiddleContainer{
+    position: absolute;
+    top: 255px;
+    left: 80px;
+    width: 141px;
+    height: 74px;
+}
+
+#F3ImageMiddle{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 141px;
+    height: 74px;
+    background: url("F3Image.png");
+    background-size: 100% 100%;
+}
+
+/* ---------------------------------- F04 IMAGES ELEMENTS ---------------------------------- */
+#F4CircleLeftContainer{
+    position: absolute;
+    top: 340px;
+    left: 0px;
+    width: 112px;
+    height: 112px;
+}
+
+#F4CircleLeft{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 112px;
+    height: 112px;
+    background: url("F1F4FFCircle.png");
+    background-size: 100% 100%;
+}
+
+#F4CircleRightContainer{
+    position: absolute;
+    top: 138px;
+    left: 190px;
+    width: 112px;
+    height: 112px;
+}
+
+#F4CircleRight{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 112px;
+    height: 112px;
+    background: url("F1F4FFCircle.png");
+    background-size: 100% 100%;
+}
+
+#F4ImageMiddleContainer{
+    position: absolute;
+    top: 255px;
+    left: 80px;
+    width: 141px;
+    height: 74px;
+}
+
+#F4ImageMiddle{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 141px;
+    height: 74px;
+    background: url("F4Image.png");
+    background-size: 100% 100%;
+}
+
+/* ---------------------------------- FRAME 01 HEADLINE ELEMENTS ---------------------------------- */
+#F1HeadlineHolder{
+    position: absolute;
+    top: 62px;
+    left: 0px;
+    width: 158px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+ 
+#F1Headline{
+    position: relative;
+    text-align: center;
+    font-family: 'Montserrat-Medium', sans-serif;
+    letter-spacing: -.1px;
+    line-height: 1.25;
+}
+
+.FontColorDarkNormal {
+    color: #8BE1FA;
+    font-size: 18px;
+}
+
+.FontColorLightNormal {
+    color: white;
+    font-size: 18px;
+}
+
+/* ---------------------------------- FRAME 02 HEADLINES ELEMENTS ---------------------------------- */
+#F2HeadlineHolder{
+    position: absolute;
+    top: 62px;
+    left: 0px;
+    width: 158px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+ 
+#F2Headline{
+    position: relative;
+    text-align: center;
+    font-family: 'Montserrat-Medium', sans-serif;
+    letter-spacing: -.1px;
+    line-height: 1.25;
+}
+
+#F2LegalDisclaimerHolder{
+    position: absolute;
+    top: 525px;
+    left: 0px;
+    width: 158px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+#F2LegalDisclaimer{
+    position: relative;
+    text-align: center;
+    font-family: 'Montserrat-Light', sans-serif;
+    letter-spacing: -.3px;
+    line-height: 1;
+    font-size: 8px;
+    color: white;
+}
+
+/* ---------------------------------- FRAME 03 HEADLINES ELEMENTS ---------------------------------- */
+#F3HeadlineHolder{
+    position: absolute;
+    top: 62px;
+    left: 0px;
+    width: 158px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+ 
+#F3Headline{
+    position: relative;
+    text-align: center;
+    font-family: 'Montserrat-Medium', sans-serif;
+    letter-spacing: -.1px;
+    line-height: 1.25;
+}
+
+/* ---------------------------------- FRAME 04 HEADLINES ELEMENTS ---------------------------------- */
+#F4HeadlineHolder{
+    position: absolute;
+    top: 62px;
+    left: 0px;
+    width: 158px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+ 
+#F4Headline{
+    position: relative;
+    text-align: center;
+    font-family: 'Montserrat-Medium', sans-serif;
+    letter-spacing: -.1px;
+    line-height: 1.25;
+}
+
+/* ---------------------------------- FRAME FF BACKGROUND ELEMENTS ---------------------------------- */
+#FFBackgroundContainer{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 160px;
+    height: 1212px;
+}
+
+#FFBackgroundLight{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 160px;
+    height: 204px;
+    background-color:white;
+}
+
+#FFBackgroundDark{
+    position: absolute;
+    top:204px;
+    left: 0px;
+    width: 160px;
+    height: 204px;
+    background-color:#CFE0FF; 
+}
+
+#FFBackgroundMedium{
+    position: absolute;
+    top:408px;
+    left: 0px;
+    width: 160px;
+    height: 204px;
+    background-color:#0D62FF; 
+}
+
+#FFBackgroundWhite{
+    position: absolute;
+    top:612px;
+    left: 0px;
+    width: 160px;
+    height: 600px;
+    background-color: #112F64;
+}
+
+/* ---------------------------------- FF IMAGES ELEMENTS ---------------------------------- */
+#FFCircleTopContainer{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 158px;
+    height: 158px;
+}
+
+#FFCircleTop{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 158px;
+    height: 158px;
+    background: url("F1F4FFCircle.png");
+    background-size: 100% 100%;
+}
+
+#FFCircleBottomContainer{
+    position: absolute;
+    top: 600px;
+    left: 100px;
+    width: 80px;
+    height: 80px;
+}
+
+#FFCircleBottom{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 134px;
+    height: 134px;
+    background: url("FFCircleBottom.png");
+    background-size: 100% 100%;
+}
+
+#FFCircleMiddleContainer{
+    position: absolute;
+    top: 328px;
+    left: 0px;
+    width: 79px;
+    height: 79px;
+}
+
+#FFCircleMiddle{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 79px;
+    height: 79px;
+    background: url("FFCircleMiddle.png");
+    background-size: 100% 100%;
+}
+
+/* ---------------------------------- FRAME FF HEADLINES ELEMENTS ---------------------------------- */
+#FFHeadlineMask{
+    position: absolute;
+    top: 168px;
+    left: 0px;
+    width: 158px;
+    height: 140px;
+    overflow: hidden;
+}
+
+#FFHeadlineHolder{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 158px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+ 
+#FFHeadline{
+    position: relative;
+    text-align: center;
+    font-family: 'Montserrat-Medium', sans-serif;
+    letter-spacing: -.1px;
+    line-height: 1.2;
+}
+
+/* ---------------------------------- FOOTER ELEMENTS ---------------------------------- */
+#CBLogoContainer{
+    position: absolute;
+    top:442px;
+    left: 35px;
+    width: 89px;
+    height: 31px;
+}
+
+#CBLogo{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 89px;
+    height: 31px;
+    background: url("CBLogo.svg");
+    background-size: 100% 100%;
+}
+
+#CTABg {
+    top: 490px;
+    left: 18px;
+    width: 122px;
+    height: 34px;
+    overflow: hidden;
+    background-color: #8BE1FA;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#CTA {
+    position: relative;
+    text-align: center;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 12px;
+    letter-spacing: -.2px;
+    line-height: 1.3;
+    color: #112F64;
+}
+
+/*------------------ JS Switching Classes ------------------- */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inline-block;
+}
